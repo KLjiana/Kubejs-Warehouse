@@ -1,10 +1,12 @@
 // 写packmod的指令快捷设定
-let mode = ["dimensionStages"]
+let mode = ["normal", "dimensionStages", "enchantDesc"]
 ServerEvents.commandRegistry(event => {
     const { commands, arguments } = event
 
     event.register(commands.literal('packmode').requires(s => s.hasPermission(2))
-      .then(commands.literal('dimensionStages').executes(fly()))
+      .then(commands.literal(mode[0]).executes(c =>fly(mode[0], c.source.server)))
+      .then(commands.literal(mode[1]).executes(c =>fly(mode[1], c.source.server)))
+      .then(commands.literal(mode[2]).executes(c =>fly(mode[2], c.source.server)))
     )
     
     /**
