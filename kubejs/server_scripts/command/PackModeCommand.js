@@ -1,6 +1,6 @@
 // 写packmod的指令快捷设定
 
-let mode = ["normal", "dimensionStages", "enchantDesc", "export"]
+let mode = ["normal", "DimensionStages", "EnchantDesc"]
 ServerEvents.commandRegistry(event => {
     const { commands, arguments } = event
     
@@ -8,7 +8,6 @@ ServerEvents.commandRegistry(event => {
       .then(commands.literal(mode[0]).executes(c =>fly(mode[0], c.source.server)))
       .then(commands.literal(mode[1]).executes(c =>fly(mode[1], c.source.server)))
       .then(commands.literal(mode[2]).executes(c =>fly(mode[2], c.source.server)))
-      .then(commands.literal(mode[3]).executes(c =>fly(mode[3], c.source.server)))
     )
 
     /**

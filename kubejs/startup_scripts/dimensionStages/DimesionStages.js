@@ -1,4 +1,4 @@
-// packmod:dimensionStages
+// packmod:DimensionStages
 /**
  * @param {Internal.Player_} player
  * @param {Internal.NumberFormat_} killed
